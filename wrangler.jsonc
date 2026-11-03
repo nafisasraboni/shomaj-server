@@ -1,0 +1,24 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "shomaj-api",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-11-02",
+  "compatibility_flags": ["nodejs_compat", "enable_nodejs_http_server_modules"],
+  "services": [
+    {
+      "binding": "AUTH_SERVICE",
+      "service": "shomaj"
+    }
+  ],
+  "routes": [
+    {
+      "pattern": "api.shomaj.sraboni.dev",
+      "custom_domain": true
+    }
+  ],
+  "vars": {
+    "MONGODB_DB_NAME": "shomaj",
+    "CLIENT_ORIGIN": "https://shomaj.sraboni.dev",
+    "AUTH_BASE_URL": "https://shomaj.sraboni.dev"
+  }
+}
