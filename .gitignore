@@ -1,0 +1,9 @@
+node_modules/
+.wrangler/
+coverage/
+*.log
+.env*
+.dev.vars*
+!.env.example
+!.dev.vars.example
+*.tsbuildinfo
